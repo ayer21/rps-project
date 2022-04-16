@@ -24,13 +24,13 @@ function playRound(playerSelection, computerSelection) {
         return 'Tie'
     }
     else if (playerSelection == 'rock') {
-        return computerSelection == 'paper' ? 'You Lose' : 'You Win'
+        return computerSelection == 'scissors' ? 'You Win! Rock beats Scissors' : 'You Lose! Paper beats Rock'
     }
     else if (playerSelection == 'paper') {
-        return computerSelection == 'rock' ? 'You Win' : 'You Lose'
+        return computerSelection == 'rock' ? 'You Win! Paper beats Rock' : 'You Lose! Scissors beats Paper'
     }
     else if (playerSelection == 'scissors') {
-        return computerSelection == 'rock' ? 'You Lose' : 'You Win'
+        return computerSelection == 'paper' ? 'You Win! Scissors beats Paper' : 'You Lose! Rock beats Scissors'
     }
     else return `the value you provided, '${playerSelection}', is not an option`
 }
