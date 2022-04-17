@@ -57,5 +57,11 @@ function game() {
         computerSelection = computerPlay(); // calls the function computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’.
         console.log(playRound(playerSelection, computerSelection));
     }
-    return (winCount > loseCount) ? 'You won the game' : 'You lost the game';
+    let result;
+    if (winCount > loseCount && winCount > tieCount) result = 'You Won The Game!';
+    else if (tieCount > winCount && tieCount > loseCount) result = 'It\'s a tie';
+    else if (loseCount > winCount && loseCount > tieCount) result = 'You lost the game';
+    else return 'There is problem with counting your result...';
+    result = result + `, here are the results: you won ${winCount} rounds, lost ${loseCount} rounds, and tied ${tieCount} times`
+    return result;
 };
