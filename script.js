@@ -1,19 +1,17 @@
 let playerSelection,
-    computerSelection;
-winCount = 0,
+    computerSelection,
+    winCount = 0,
     loseCount = 0,
     tieCount = 0;
 console.log(game());
 
 function computerPlay() {
-    // pick a random number (from 0 to 9), and based on it, pick one of the strings
+    // pick a random number (from 1 to 9), and based on it, pick one of the strings. if the number is 0, retry
     let random, match;
-    () => {
-        random = Math.trunc(Math.random() * 10);
-        if (random === 0) {
-            for (let i = 0; random === 0; i++) {
-                random = Math.trunc(Math.random() * 10)
-            }
+    random = Math.trunc(Math.random() * 10);
+    if (random === 0) {
+        for (let i = 0; random === 0; i++) {
+            random = Math.trunc(Math.random() * 10)
         }
     }
     match = (random % 3 === 0) ? 'rock' : (random % 2 === 0) ? 'paper' : 'scissors';
@@ -22,11 +20,10 @@ function computerPlay() {
     return match;
 }
 
-// function take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner
-
 function playRound(playerSelection, computerSelection) {
+    // take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner
     // each string have two coditions/rules, it's powerful than one and weaker than the other. evaluate the conditions and return the result
-    // to do: make playerSelection case insensitive with regex
+    // to do: make playerSelection case insensitive with regex instead of lowerCase method
 
     if (playerSelection == computerSelection) { tieCount++; return 'Tie'; }
     else if (playerSelection == 'rock') {
