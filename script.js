@@ -55,9 +55,9 @@ function game() {
         console.log(playRound(playerSelection, computerSelection));
     }
     let result;
-    if (winCount > loseCount && winCount > tieCount) result = 'You Won The Game!';
+    if (winCount > loseCount && winCount >= tieCount) result = 'You won the game';
+    else if (loseCount > winCount && loseCount >= tieCount) result = 'You lost the game';
     else if (tieCount > winCount && tieCount > loseCount) result = 'It\'s a tie';
-    else if (loseCount > winCount && loseCount > tieCount) result = 'You lost the game';
     else return 'There is problem with counting your result...';
     result = result + `, here are the results: you won ${winCount} rounds, lost ${loseCount} rounds, and tied ${tieCount} times`
     return result;
