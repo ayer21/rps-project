@@ -1,0 +1,17 @@
+body {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+    gap: 50px;
+}
+.board {
+    align-self: flex-start;
+    margin-left: 200px;
+    padding: 5px;
+    padding-right: 50px;
+    border: solid 1px black;
+}
