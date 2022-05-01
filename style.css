@@ -1,17 +1,70 @@
-body {
+/* * {
+    border: solid 1px black;
+}*/
+
+html {
     max-width: 1000px;
     margin: auto;
+}
+
+.board {
+    margin-left: 150px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 70px 20px;
+}
+
+.intro {
+    width: 200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 100px;
+    justify-content: center;
     gap: 50px;
 }
-.board {
-    align-self: flex-start;
-    margin-left: 200px;
-    padding: 5px;
-    padding-right: 50px;
+
+#title {
+    grid-column: 1 / 3;
+    padding: 3px;
     border: solid 1px black;
+    border-bottom: 0;
+}
+
+.board div {
+    padding: 2px;
+    border: solid 1px black;
+}
+
+#wins, #losses {
+    text-align: right;
+    border: solid 1px black;
+}
+
+.result {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.selections {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.selections > div {
+    width: 100px;
+    text-align: center;
+}
+
+#player, #computer {
+    border-top: solid 1px black;
+    margin: 1px;
+    padding: 10px;
+    font-weight: bold;
 }
